@@ -1,6 +1,6 @@
-import { graphql } from "gatsby"
-import React from "react"
-import Layout from "../components/layout"
+import { graphql } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
 
 export const query = graphql`
   query($slug: String!) {
@@ -12,9 +12,9 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 
-const Blog = props => {
+const Blog = (props) => {
   return (
     <div>
       <Layout>
@@ -25,7 +25,7 @@ const Blog = props => {
         ></div>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
