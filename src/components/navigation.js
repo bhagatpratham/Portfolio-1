@@ -1,6 +1,6 @@
-import { Link, graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import * as navigationStyles from "./navigation.module.scss"
+import { Link, graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import * as navigationStyles from "./navigation.module.scss";
 
 const Navigation = () => {
   const data = useStaticQuery(graphql`
@@ -11,7 +11,7 @@ const Navigation = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <header className={navigationStyles.header}>
@@ -48,12 +48,12 @@ const Navigation = () => {
             <Link
               className={navigationStyles.navItem}
               activeClassName={navigationStyles.activeNavItem}
-              to="/about"
+              to="/projects"
             >
-              About
+              Projects
             </Link>
           </li>
-          <li>
+          {/*    <li>
             <Link
               className={navigationStyles.navItem}
               activeClassName={navigationStyles.activeNavItem}
@@ -61,11 +61,11 @@ const Navigation = () => {
             >
               Contact
             </Link>
-          </li>
+      </li>   */}
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
